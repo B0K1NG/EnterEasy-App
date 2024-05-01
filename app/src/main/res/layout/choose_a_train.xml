@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/choose_a_train"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Header -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/toolbar_border"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="190dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/entereasy"
+            android:paddingLeft="10dp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Body -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:paddingTop="100dp"
+                android:paddingLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose a train line/route"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="100dp">
+
+                <LinearLayout
+                    android:id="@+id/container1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/button">
+
+                    <TextView
+                        android:id="@+id/train1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="20dp"
+                        android:text="Train Line A"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="25sp"
+                        android:textStyle="bold"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="20dp"
+                            android:text="Wheelchair accessible"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp"/>
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/disabled"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="20dp"
+                            android:text="Ramps available"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp"/>
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ramp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="20dp"
+                            android:text="Elevators available"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp"/>
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/elevator"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="20dp"
+                            android:text="Platform:"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:text="3A"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="20dp"
+                            android:text="From:"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:text="Destination 1"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="20dp"
+                            android:text="To:"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:text="Destination 2"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="15sp"
+                        android:layout_marginTop="5sp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="20dp"
+                            android:text="Departure times:"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp"/>
+                        <Button
+                            android:id="@+id/button_a_930"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="09:30h"
+                            android:textSize="20sp"
+                            android:background="@drawable/white"/>
+                        <Button
+                            android:id="@+id/button_a_1130"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="11:30h"
+                            android:textSize="20sp"
+                            android:padding="5dp"
+                            android:background="@drawable/white"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/container2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/button"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/train2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="20dp"
+                        android:text="Train Line B"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="20dp"
+                            android:text="Wheelchair accessible"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp"/>
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/disabled"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="20dp"
+                            android:text="Elevators available"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp"/>
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/elevator"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="20dp"
+                            android:text="Platform:"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:text="4B"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="20dp"
+                            android:text="From:"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:text="Destination 3"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="20dp"
+                            android:text="To:"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:text="Destination 4"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="15sp"
+                        android:layout_marginTop="5sp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="20dp"
+                            android:text="Departure times:"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp"/>
+                        <Button
+                            android:id="@+id/button_b_1015"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="10:15h"
+                            android:textSize="20sp"
+                            android:padding="5dp"
+                            android:background="@drawable/white"/>
+                        <Button
+                            android:id="@+id/button_b_1245"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="12:45h"
+                            android:textSize="20sp"
+                            android:padding="5dp"
+                            android:background="@drawable/white"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/container3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/button"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/train3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="20dp"
+                        android:text="Train Line C"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="25sp"
+                        android:textStyle="bold"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="20dp"
+                            android:text="Wheelchair accessible"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp"/>
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/disabled"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="20dp"
+                            android:text="Ramps available"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp"/>
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ramp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="20dp"
+                            android:text="Elevators available"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp"/>
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/elevator"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="20dp"
+                            android:text="Platform:"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:text="2A"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="20dp"
+                            android:text="From:"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:text="Destination 5"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="20dp"
+                            android:text="To:"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:text="Destination 6"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="15sp"
+                        android:layout_marginTop="5sp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="20dp"
+                            android:text="Departure times:"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp"/>
+                        <Button
+                            android:id="@+id/button_c_830"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="08:30h"
+                            android:textSize="20sp"
+                            android:padding="5dp"
+                            android:background="@drawable/white"/>
+                        <Button
+                            android:id="@+id/button_c_1100"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="11:00h"
+                            android:textSize="20sp"
+                            android:padding="5dp"
+                            android:background="@drawable/white"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <!-- Footer -->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/dark_gray"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar1"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:id="@+id/homebutton"
+            android:layout_width="85dp"
+            android:layout_height="70dp"
+            android:layout_gravity="left"
+            android:src="@drawable/home"
+            android:padding="10dp"/>
+
+        <ImageView
+            android:id="@+id/searchbutton"
+            android:layout_width="85dp"
+            android:layout_height="70dp"
+            android:layout_gravity="left"
+            android:src="@drawable/search"
+            android:padding="10dp"/>
+
+        <ImageView
+            android:id="@+id/profilebutton"
+            android:layout_width="85dp"
+            android:layout_height="60dp"
+            android:layout_gravity="left"
+            android:src="@drawable/profile"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/gobackbutton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="20dp"
+            android:background="@drawable/button"
+            android:padding="5dp"
+            android:text="Go Back"
+            android:textColor="@android:color/white" />
+
+    </androidx.appcompat.widget.Toolbar>
+</androidx.constraintlayout.widget.ConstraintLayout>
