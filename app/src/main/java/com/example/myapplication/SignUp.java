@@ -15,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class SignUp extends AppCompatActivity {
 
-    EditText email, pw, name, surname;
+    EditText un, pw, name, surname;
     DBHelper dbHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,30 +28,30 @@ public class SignUp extends AppCompatActivity {
             return insets;
         });
 
-        email = findViewById(R.id.editTextTextEmailAddress2);
+        un = findViewById(R.id.editTextTextEmailAddress2);
         pw = findViewById(R.id.editTextTextPassword2);
-        name =  findViewById(R.id.editTextTextMultiLine2);
-        surname = findViewById(R.id.editTextTextMultiLine);
+        name =  findViewById(R.id.editTextTextEmailAddress3);
+        surname = findViewById(R.id.editTextTextEmailAddress4);
         dbHelper = new DBHelper(this);
 
         Button button = findViewById(R.id.button3);  // Correct the button ID
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String mail, pass, fname, lname;
-                mail = email.getText().toString();
+                String username, pass, fname, lname;
+                username = un.getText().toString();
                 pass = pw.getText().toString();
                 fname = name.getText().toString();
                 lname = surname.getText().toString();
 
-                if (mail.equals("") || pass.equals("") || fname.equals("") || lname.equals("")){
+                if (username.equals("") || pass.equals("") || fname.equals("") || lname.equals("")){
                     Toast.makeText(SignUp.this, "Please fill all the fields.", Toast.LENGTH_LONG).show();
                 } else {
-                    if (dbHelper.checkMail(mail)) {
+                    if (dbHelper.checkMail(username)) {
                         Toast.makeText(SignUp.this, "Email already in use.", Toast.LENGTH_LONG).show();
                         return;
                     }
-                    boolean registeredSuccess = dbHelper.insertData(mail, pass);
+                    boolean registeredSuccess = dbHelper.insertData(username, pass);
                     if (registeredSuccess) {
                         Toast.makeText(SignUp.this, "User registered successfully.", Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(SignUp.this, SignIn.class);  // Ensure correct context and class

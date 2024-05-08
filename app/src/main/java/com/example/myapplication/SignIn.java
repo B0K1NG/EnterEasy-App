@@ -16,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class SignIn extends AppCompatActivity {
 
-    EditText email, pw;
+    EditText un, pw;
     DBHelper dbHelper;
 
     @Override
@@ -30,7 +30,7 @@ public class SignIn extends AppCompatActivity {
             return insets;
         });
 
-        email = findViewById(R.id.editTextTextEmailAddress);
+        un = findViewById(R.id.editTextTextEmailAddress);
         pw = findViewById(R.id.editTextTextPassword);
         dbHelper = new DBHelper(this);
 
@@ -48,7 +48,7 @@ public class SignIn extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean isLoggedId = dbHelper.checkUser(email.getText().toString(), pw.getText().toString());
+                boolean isLoggedId = dbHelper.checkUser(un.getText().toString(), pw.getText().toString());
                 if (isLoggedId) {
                     Intent intent = new Intent(SignIn.this, HomePage.class);
                     startActivity(intent);
