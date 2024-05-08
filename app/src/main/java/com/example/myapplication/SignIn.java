@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +15,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class SignIn extends AppCompatActivity {
+
+    EditText email, pw;
+    DBHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +29,10 @@ public class SignIn extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        email = findViewById(R.id.editTextTextEmailAddress);
+        pw = findViewById(R.id.editTextTextPassword);
+        dbHelper = new DBHelper(this);
 
         // Set up the sign-up text to be clickable
         TextView signUpText = findViewById(R.id.textView4);  // Make sure the ID matches your XML
@@ -39,6 +48,15 @@ public class SignIn extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                boolean isLoggedId = dbHelper.checkUser(email.getText().toString(), pw.getText().toString());
+                if (isLoggedId) {
+                    Intent intent = new Intent(SignIn.this, HomePage.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(SignIn.this, "Login failed.", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
                 Intent intent = new Intent(SignIn.this, HomePage.class);  // Ensure correct context and class
                 startActivity(intent);
             }
