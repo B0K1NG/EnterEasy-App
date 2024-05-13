@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string-array name="ramp_options">
+        <item>Select Ramp</item>
+        <item>Ramp A</item>
+        <item>Ramp B</item>
+        <item>Ramp C</item>
+    </string-array>
+
+    <string-array name="elevator_options">
+        <item>Select Elevator</item>
+        <item>Elevator A</item>
+        <item>Elevator B</item>
+    </string-array>
 </resources>
+

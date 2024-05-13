@@ -16,6 +16,9 @@ public class HomePage extends AppCompatActivity {
 
 
     ImageButton seatsButton;
+    ImageButton navigationButton;
+    ImageButton reportButton;
+    ImageButton chatButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,9 @@ public class HomePage extends AppCompatActivity {
 
         Button button = findViewById(R.id.button4);
         seatsButton = (ImageButton)findViewById(R.id.imageButton);
+        navigationButton = (ImageButton)findViewById(R.id.imageButton2);
+        reportButton = (ImageButton)findViewById(R.id.imageButton5);
+        chatButton = (ImageButton)findViewById(R.id.imageButton6);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +49,30 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomePage.this, choosetrain.class);
+                startActivity(intent);
+            }
+        });
+
+        navigationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomePage.this, navigation.class);
+                startActivity(intent);
+            }
+        });
+
+        reportButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomePage.this, report_main.class);
+                startActivity(intent);
+            }
+        });
+
+        chatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomePage.this, Chat.class);
                 startActivity(intent);
             }
         });

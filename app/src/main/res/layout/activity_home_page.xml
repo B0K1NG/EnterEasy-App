@@ -80,7 +80,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/available_seats"/>
+            app:srcCompat="@drawable/available_seats"
+            android:contentDescription="Available Seats"/>
     </LinearLayout>
 
     <LinearLayout
@@ -183,40 +184,8 @@
             android:background="#4682B4 " />
     </LinearLayout>
 
-    <!--4th-->
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#9EC9EC"
-        android:gravity="center"
-        android:text="Accessibility information"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
-        tools:layout_editor_absoluteX="0dp" />
-
 
     <!--5th-->
-
-    <LinearLayout
-        android:id="@+id/linearLayout34"
-        android:layout_width="match_parent"
-
-        android:layout_height="8dp"
-        android:background="#4682B4 "
-        app:layout_constraintTop_toBottomOf="@+id/textView16"
-        tools:layout_editor_absoluteX="-3dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="105dp"
-            android:layout_marginBottom="105dp"
-            android:background="#4682B4 " />
-    </LinearLayout>
 
     <TextView
         android:id="@+id/textView30"
@@ -237,7 +206,7 @@
         android:layout_height="wrap_content"
         android:background="#9EC9EC"
         android:gravity="center"
-        android:text="Live Chat"
+        android:text="Chat"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -270,17 +239,10 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-        app:srcCompat="@drawable/navigation_system" />
+        app:srcCompat="@drawable/navigation_system"
+        android:contentDescription="Navigation System"/>
 
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="match_parent"
-        android:layout_height="114dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:srcCompat="@drawable/report_an_issue" />
+
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -305,15 +267,17 @@
         android:layout_height="114dp"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
         app:srcCompat="@drawable/report_issue"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="0dp"
+        android:contentDescription="Report an issue"/>
 
     <ImageButton
         android:id="@+id/imageButton6"
         android:layout_width="match_parent"
         android:layout_height="114dp"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout34"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:srcCompat="@drawable/live_chat"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="0dp"
+        android:contentDescription="Chat"/>
 
     <Button
         android:id="@+id/button4"
