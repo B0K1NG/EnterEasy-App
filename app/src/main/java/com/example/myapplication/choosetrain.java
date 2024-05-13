@@ -11,6 +11,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class choosetrain extends AppCompatActivity {
 
@@ -21,6 +22,7 @@ public class choosetrain extends AppCompatActivity {
     Button button_c_830;
     Button button_c_1100;
     Button gobackbutton;
+    ImageButton home;
 
 
     @Override
@@ -41,6 +43,7 @@ public class choosetrain extends AppCompatActivity {
         button_c_830=(Button)findViewById(R.id.button_c_830);
         button_c_1100=(Button)findViewById(R.id.button_c_1100);
         gobackbutton=(Button)findViewById(R.id.gobackbutton);
+        home=(ImageButton)findViewById(R.id.homebutton);
 
         button_a_930.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,6 +94,14 @@ public class choosetrain extends AppCompatActivity {
         });
 
         gobackbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                Intent intent=new Intent(choosetrain.this, HomePage.class);
+                startActivity(intent);
+            }
+        });
+
+        home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
                 Intent intent=new Intent(choosetrain.this, HomePage.class);

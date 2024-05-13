@@ -223,19 +223,22 @@
                             android:id="@+id/button_a_930"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
+                            android:layout_marginLeft="10dp"
                             android:text="09:30h"
                             android:textSize="20sp"
-                            android:background="@drawable/white"/>
+                            android:padding="5dp"
+                            android:backgroundTint="@color/whitesmoke"
+                            android:textColor="@color/dark_gray"/>
                         <Button
                             android:id="@+id/button_a_1130"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
+                            android:layout_marginLeft="10dp"
                             android:text="11:30h"
                             android:textSize="20sp"
                             android:padding="5dp"
-                            android:background="@drawable/white"/>
+                            android:backgroundTint="@color/whitesmoke"
+                            android:textColor="@color/dark_gray"/>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -384,20 +387,22 @@
                             android:id="@+id/button_b_1015"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
+                            android:layout_marginLeft="10dp"
                             android:text="10:15h"
                             android:textSize="20sp"
                             android:padding="5dp"
-                            android:background="@drawable/white"/>
+                            android:backgroundTint="@color/whitesmoke"
+                            android:textColor="@color/dark_gray"/>
                         <Button
                             android:id="@+id/button_b_1245"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
+                            android:layout_marginLeft="10dp"
                             android:text="12:45h"
                             android:textSize="20sp"
                             android:padding="5dp"
-                            android:background="@drawable/white"/>
+                            android:backgroundTint="@color/whitesmoke"
+                            android:textColor="@color/dark_gray"/>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -567,20 +572,22 @@
                             android:id="@+id/button_c_830"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
+                            android:layout_marginLeft="10dp"
                             android:text="08:30h"
                             android:textSize="20sp"
                             android:padding="5dp"
-                            android:background="@drawable/white"/>
+                            android:backgroundTint="@color/whitesmoke"
+                            android:textColor="@color/dark_gray"/>
                         <Button
                             android:id="@+id/button_c_1100"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
+                            android:layout_marginLeft="10dp"
                             android:text="11:00h"
                             android:textSize="20sp"
                             android:padding="5dp"
-                            android:background="@drawable/white"/>
+                            android:backgroundTint="@color/whitesmoke"
+                            android:textColor="@color/dark_gray"/>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -606,38 +613,25 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar1"
         app:layout_constraintVertical_bias="1.0">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/homebutton"
             android:layout_width="85dp"
             android:layout_height="70dp"
-            android:layout_gravity="left"
+            android:layout_gravity="center"
+            android:background="@color/dark_gray"
             android:src="@drawable/home"
-            android:padding="10dp"/>
+            android:layout_marginEnd="70dp"/>
 
-        <ImageView
-            android:id="@+id/searchbutton"
-            android:layout_width="85dp"
-            android:layout_height="70dp"
-            android:layout_gravity="left"
-            android:src="@drawable/search"
-            android:padding="10dp"/>
-
-        <ImageView
-            android:id="@+id/profilebutton"
-            android:layout_width="85dp"
-            android:layout_height="60dp"
-            android:layout_gravity="left"
-            android:src="@drawable/profile"
-            android:padding="10dp"/>
 
         <Button
             android:id="@+id/gobackbutton"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
+            android:layout_gravity="center"
             android:layout_margin="20dp"
             android:background="@drawable/button"
             android:padding="5dp"
+            android:layout_marginStart="70dp"
             android:text="Go Back"
             android:textColor="@android:color/white" />
 
