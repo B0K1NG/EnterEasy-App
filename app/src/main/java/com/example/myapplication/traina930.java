@@ -11,10 +11,12 @@ import androidx.core.view.WindowInsetsCompat;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class traina930 extends AppCompatActivity {
 
     Button gobackbutton;
+    ImageButton home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +30,20 @@ public class traina930 extends AppCompatActivity {
         });
 
         gobackbutton=(Button)findViewById(R.id.gobackbutton);
+        home=(ImageButton)findViewById(R.id.homebutton);
 
         gobackbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
                 Intent intent=new Intent(traina930.this, choosetrain.class);
+                startActivity(intent);
+            }
+        });
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                Intent intent=new Intent(traina930.this, HomePage.class);
                 startActivity(intent);
             }
         });
