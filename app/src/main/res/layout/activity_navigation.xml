@@ -60,11 +60,11 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
         android:layout_width="match_parent"
-        android:layout_height="76dp"
+        android:layout_height="80dp"
         android:background="@color/dark_gray"
-        android:gravity="center"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.555"
@@ -72,35 +72,23 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar1"
         app:layout_constraintVertical_bias="1.0">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/homebutton"
             android:layout_width="85dp"
             android:layout_height="70dp"
-            android:layout_gravity="left"
-            android:padding="10dp"
-            android:src="@drawable/home" />
+            android:layout_gravity="center"
+            android:background="@color/dark_gray"
+            android:src="@drawable/home"
+            tools:ignore="SpeakableTextPresentCheck"
+            tools:layout_editor_absoluteX="66dp"
+            tools:layout_editor_absoluteY="5dp" />
 
-        <ImageView
-            android:id="@+id/searchbutton"
-            android:layout_width="85dp"
-            android:layout_height="70dp"
-            android:layout_gravity="left"
-            android:padding="10dp"
-            android:src="@drawable/search" />
-
-        <ImageView
-            android:id="@+id/profilebutton"
-            android:layout_width="85dp"
-            android:layout_height="60dp"
-            android:layout_gravity="left"
-            android:padding="10dp"
-            android:src="@drawable/profile" />
 
         <Button
             android:id="@+id/gobackbutton"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
+            android:layout_gravity="center"
             android:layout_margin="20dp"
             android:background="@drawable/button"
             android:minHeight="48dp"
@@ -108,11 +96,10 @@
             android:text="Go Back"
             android:textColor="@android:color/white"
             tools:ignore="TouchTargetSizeCheck"
-            tools:layout_editor_absoluteX="282dp"
-            tools:layout_editor_absoluteY="20dp" />
+            tools:layout_editor_absoluteX="225dp"
+            tools:layout_editor_absoluteY="21dp" />
 
     </androidx.appcompat.widget.Toolbar>
-
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="30dp"
