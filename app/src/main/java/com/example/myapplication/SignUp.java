@@ -22,7 +22,7 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_sign_up);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.signup), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
@@ -48,7 +48,7 @@ public class SignUp extends AppCompatActivity {
                     Toast.makeText(SignUp.this, "Please fill all the fields.", Toast.LENGTH_LONG).show();
                 } else {
                     if (dbHelper.checkMail(username)) {
-                        Toast.makeText(SignUp.this, "Email already in use.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(SignUp.this, "Username already in use.", Toast.LENGTH_LONG).show();
                         return;
                     }
                     boolean registeredSuccess = dbHelper.insertData(username, pass);

@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/navigation"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".navigation">
@@ -117,36 +117,36 @@
         android:id="@+id/imageView8"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/toolbar2"
+        app:layout_constraintBottom_toTopOf="@+id/imageView9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        app:layout_constraintVertical_bias="0.052"
+        app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/ramp_2008593" />
 
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/toolbar2"
+        app:layout_constraintBottom_toTopOf="@+id/imageView10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        app:layout_constraintVertical_bias="0.304"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8"
+        app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/elevator_3248791" />
 
     <ImageView
         android:id="@+id/imageView10"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/toolbar2"
+        app:layout_constraintBottom_toTopOf="@+id/imageView11"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        app:layout_constraintVertical_bias="0.562"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/train" />
 
     <ImageView
@@ -157,8 +157,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        app:layout_constraintVertical_bias="0.807"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10"
+        app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/ticket_3714080" />
 
     <ImageView
@@ -169,8 +169,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.574"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        app:layout_constraintVertical_bias="0.807"
+        app:layout_constraintTop_toBottomOf="@+id/imageView13"
+        app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/disabled_1467236" />
 
     <ImageView
@@ -181,8 +181,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.574"
         app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        app:layout_constraintVertical_bias="0.923"
+        app:layout_constraintTop_toBottomOf="@+id/imageView14"
+        app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/handshake_3728607" />
 
     <ImageView
@@ -193,8 +193,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.574"
         app:layout_constraintStart_toEndOf="@+id/imageView9"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        app:layout_constraintVertical_bias="0.851"
+        app:layout_constraintTop_toBottomOf="@+id/imageView15"
+        app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/wet_floor_13526656" />
 
     <ImageView
@@ -206,6 +206,7 @@
         app:layout_constraintHorizontal_bias="0.574"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/enter_7917260" />
 
     <TextView
@@ -221,7 +222,7 @@
         app:layout_constraintHorizontal_bias="0.086"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintVertical_bias="0.125" />
 
     <TextView
         android:id="@+id/textView19"
@@ -232,17 +233,17 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/toolbar2"
-        app:layout_constraintEnd_toStartOf="@+id/imageView14"
+        app:layout_constraintEnd_toStartOf="@+id/imageView13"
         app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toEndOf="@+id/imageView9"
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        app:layout_constraintVertical_bias="0.339" />
+        app:layout_constraintVertical_bias="0.389" />
 
     <TextView
         android:id="@+id/textView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="32dp"
         android:text="Tickets"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="16sp"
@@ -265,12 +266,13 @@
         app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toEndOf="@+id/imageView15"
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintVertical_bias="0.15" />
 
     <TextView
         android:id="@+id/textView23"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Obstacle"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="16sp"
@@ -280,12 +282,13 @@
         app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toEndOf="@+id/imageView14"
         app:layout_constraintTop_toBottomOf="@+id/textView22"
-        app:layout_constraintVertical_bias="0.132" />
+        app:layout_constraintVertical_bias="0.130" />
 
     <TextView
         android:id="@+id/textView24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Help"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="16sp"
@@ -295,7 +298,7 @@
         app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toEndOf="@+id/imageView13"
         app:layout_constraintTop_toBottomOf="@+id/textView23"
-        app:layout_constraintVertical_bias="0.192" />
+        app:layout_constraintVertical_bias="0.28" />
 
     <TextView
         android:id="@+id/textView25"
@@ -310,7 +313,7 @@
         app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toEndOf="@+id/imageView12"
         app:layout_constraintTop_toBottomOf="@+id/textView24"
-        app:layout_constraintVertical_bias="0.369" />
+        app:layout_constraintVertical_bias="0.625" />
 
     <TextView
         android:id="@+id/textView26"
@@ -325,5 +328,5 @@
         app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toEndOf="@+id/imageView10"
         app:layout_constraintTop_toBottomOf="@+id/textView19"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.512" />
 </androidx.constraintlayout.widget.ConstraintLayout>
