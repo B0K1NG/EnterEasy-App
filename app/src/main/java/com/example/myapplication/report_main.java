@@ -25,6 +25,7 @@ public class report_main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report);
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.report), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -56,26 +57,19 @@ public class report_main extends AppCompatActivity {
                 String rampReport = spinner.getSelectedItem().toString();
                 String elevatorReport = spinner2.getSelectedItem().toString();
 
-                // Check if both reports are selected
                 if (!rampReport.equals("Select Ramp") && !elevatorReport.equals("Select Elevator")) {
-                    // Show error message if both reports are selected
                     showToast("You can only select one type of report");
                 } else if (!rampReport.equals("Select Ramp")) {
-                    // Add Ramp report to RecyclerView with descriptive text
                     reportAdapter.addReport(new Report("Ramp malfunction: " + rampReport));
                 } else if (!elevatorReport.equals("Select Elevator")) {
-                    // Add Elevator report to RecyclerView with descriptive text
                     reportAdapter.addReport(new Report("Elevator out of order: " + elevatorReport));
                 } else {
-                    // Show error message if no report is selected
                     showToast("Please select a report");
                 }
             }
         });
-
     }
 
-    // Utility method to show Toast messages
     private void showToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
