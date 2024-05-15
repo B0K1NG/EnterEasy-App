@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportViewHolder> {
     private List<Report> reports = new ArrayList<>();
 
@@ -25,7 +26,6 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_report_custom, parent, false);
         return new ReportViewHolder(view);
     }
-
 
     @Override
     public void onBindViewHolder(@NonNull ReportViewHolder holder, int position) {
@@ -49,8 +49,13 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
         }
 
         public void bind(Report report) {
-            rampTextView.setText(report.getRampReport());
-            elevatorTextView.setText(report.getElevatorReport());
+            if (report.getRampReport() != null) {
+                rampTextView.setText(report.getRampReport());
+                elevatorTextView.setText(""); 
+            } else if (report.getElevatorReport() != null) {
+                elevatorTextView.setText(report.getElevatorReport());
+                rampTextView.setText(""); 
+            }
         }
     }
 }
