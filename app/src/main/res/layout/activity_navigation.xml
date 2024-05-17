@@ -79,6 +79,7 @@
             android:layout_gravity="center"
             android:background="@color/dark_gray"
             android:src="@drawable/home"
+            android:layout_marginEnd="70dp"
             tools:ignore="SpeakableTextPresentCheck"
             tools:layout_editor_absoluteX="66dp"
             tools:layout_editor_absoluteY="5dp" />

@@ -1,11 +1,13 @@
 package com.example.myapplication;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -18,6 +20,8 @@ public class Chat extends AppCompatActivity {
 
     private EditText editTextMessage;
     private LinearLayout llConversation;
+    Button gobackbutton;
+    ImageButton home;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -33,6 +37,8 @@ public class Chat extends AppCompatActivity {
         editTextMessage = findViewById(R.id.editTextMessage);
         Button buttonSend = findViewById(R.id.buttonSend);
         llConversation = findViewById(R.id.llConversation);
+        gobackbutton=(Button)findViewById(R.id.gobackbutton);
+        home=(ImageButton)findViewById(R.id.homebutton);
 
         buttonSend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +48,22 @@ public class Chat extends AppCompatActivity {
                     sendMessage(message);
                     editTextMessage.setText("");
                 }
+            }
+        });
+
+        gobackbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                Intent intent=new Intent(Chat.this, HomePage.class);
+                startActivity(intent);
+            }
+        });
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                Intent intent=new Intent(Chat.this, HomePage.class);
+                startActivity(intent);
             }
         });
     }

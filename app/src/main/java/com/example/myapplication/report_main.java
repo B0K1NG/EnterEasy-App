@@ -1,10 +1,12 @@
 package com.example.myapplication;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +21,8 @@ public class report_main extends AppCompatActivity {
     private ReportAdapter reportAdapter;
     private Spinner spinner;
     private Spinner spinner2;
+    Button gobackbutton;
+    ImageButton home;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -40,6 +44,9 @@ public class report_main extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         reportAdapter = new ReportAdapter();
         recyclerView.setAdapter(reportAdapter);
+
+        gobackbutton=(Button)findViewById(R.id.gobackbutton);
+        home=(ImageButton)findViewById(R.id.homebutton);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.ramp_options, android.R.layout.simple_spinner_item);
@@ -66,6 +73,22 @@ public class report_main extends AppCompatActivity {
                 } else {
                     showToast("Please select a report");
                 }
+            }
+        });
+
+        gobackbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                Intent intent=new Intent(report_main.this, HomePage.class);
+                startActivity(intent);
+            }
+        });
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                Intent intent=new Intent(report_main.this, HomePage.class);
+                startActivity(intent);
             }
         });
     }
