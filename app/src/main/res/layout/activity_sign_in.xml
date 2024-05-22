@@ -28,7 +28,7 @@
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/main_image" />
+        app:srcCompat="@drawable/login" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -94,7 +94,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="28dp"
         android:text="New to EnterEasy?"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -105,7 +105,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="100dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="28dp"
         android:text="Sign Up!"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -122,4 +122,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.283"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/portog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Change language to Portoguese"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

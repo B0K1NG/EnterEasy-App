@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/main_image" />
+        app:srcCompat="@drawable/login" />
 
     <TextView
         android:id="@+id/textView7"
