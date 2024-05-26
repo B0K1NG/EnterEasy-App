@@ -69,7 +69,7 @@ public class Chat extends AppCompatActivity {
     }
 
     private void sendMessage(String message) {
-        // Create TextView for the sent message
+      
         TextView textViewMessage = createTextView(message);
         textViewMessage.setBackgroundResource(R.drawable.sent_message_bg);
         LinearLayout.LayoutParams paramsSentMessage = new LinearLayout.LayoutParams(
@@ -79,13 +79,13 @@ public class Chat extends AppCompatActivity {
         paramsSentMessage.gravity = Gravity.END;
         textViewMessage.setLayoutParams(paramsSentMessage);
 
-        // Add the sent message TextView to the conversation layout
+        
         llConversation.addView(textViewMessage);
 
-        // Get the response for the message
+        
         String response = getResponse(message);
 
-        // Create TextView for the received response
+        
         TextView textViewResponse = createTextView(response);
         textViewResponse.setBackgroundResource(R.drawable.received_message_bg);
         LinearLayout.LayoutParams paramsReceivedMessage = new LinearLayout.LayoutParams(
@@ -108,8 +108,8 @@ public class Chat extends AppCompatActivity {
                 LinearLayout.LayoutParams.WRAP_CONTENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT
         );
-        // Adjust margins for left, top, right, bottom spacing
-        layoutParams.setMargins(32, 16, 32, 16); // 32dp left, 16dp top, 32dp right, 16dp bottom
+       
+        layoutParams.setMargins(32, 16, 32, 16); 
         textView.setLayoutParams(layoutParams);
         return textView;
     }
@@ -124,7 +124,7 @@ public class Chat extends AppCompatActivity {
         } else if (message.equalsIgnoreCase("platform b")) {
             return "The second elevator is not working but the ramp system is available.";
         } else if (message.equalsIgnoreCase("platform a")) {
-            return "Unfortunately, there is a ramp malfunction at platform B.";
+            return "Unfortunately, there is a ramp malfunction at platform A.";
         } else if (message.equalsIgnoreCase("how are you?")) {
             return "I'm doing well, thanks for asking!";
         } else if (message.equalsIgnoreCase("help")) {
